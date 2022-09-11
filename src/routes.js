@@ -1,6 +1,9 @@
 import React from 'react'
 
 const Dashboard = React.lazy(() => import('./views/dashboard/Dashboard'))
+const AllPosts = React.lazy(() => import('./views/posts/all-posts/AllPosts'))
+const AddPosts = React.lazy(() => import('./views/posts/add-posts/AddPosts'))
+const PreviewPosts = React.lazy(() => import('./views/posts/preview-post/PreviewPosts'))
 const Colors = React.lazy(() => import('./views/theme/colors/Colors'))
 const Typography = React.lazy(() => import('./views/theme/typography/Typography'))
 
@@ -53,6 +56,9 @@ const Widgets = React.lazy(() => import('./views/widgets/Widgets'))
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Dashboard', element: Dashboard },
+  { path: '/allposts', name: 'All Posts', element: AllPosts },
+  { path: '/addpost', name: 'Add New Post', element: AddPosts },
+  { path: '/previewposts', name: 'Preview', element: PreviewPosts },
   { path: '/theme', name: 'Theme', element: Colors, exact: true },
   { path: '/theme/colors', name: 'Colors', element: Colors },
   { path: '/theme/typography', name: 'Typography', element: Typography },
